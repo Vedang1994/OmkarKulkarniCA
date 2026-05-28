@@ -3,11 +3,23 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="container">
-        <h2>Trusted Chartered Accountant Services</h2>
-        <p>
-          Helping individuals and businesses simplify tax, GST, compliance,
-          and financial planning.
-        </p>
+
+<div className="footer-logo">
+  <img
+    src="/Images/ORK_Logo.png"
+    alt="CA Firm Logo"
+    className="footer-logo-image"
+  />
+
+  <div>
+    <h2>Omkar Kulkarni & Associates</h2>
+    <p>Trusted Chartered Accountants</p>
+    <p>
+        Helping individuals and businesses simplify tax, GST, compliance,
+        and financial planning.
+    </p>
+  </div>
+</div>
 
         <div className="footer-grid">
           <div>
