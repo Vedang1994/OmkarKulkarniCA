@@ -9,7 +9,7 @@ export default function Navbar() {
       <div className="container nav-inner">
 
 <div className="logo-container">
-<img src={`/Images/ORK_Logo.png`} alt="Logo" />
+<img src={'/Images/ORK_Logo.png'} alt="Logo" />
 
   <div className="logo-text">
     <h2>Omkar Kulkarni & Associates</h2>
