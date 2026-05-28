@@ -1,13 +1,16 @@
-
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
     <header className="navbar">
       <div className="container nav-inner">
         <div className="logo">CA Firm</div>
 
-        <nav className="nav-links">
+        {/* Desktop Menu */}
+        <nav className="nav-links desktop-menu">
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/services">Services</Link>
@@ -15,7 +18,44 @@ export default function Navbar() {
           <Link to="/blog">Blog</Link>
           <Link to="/contact">Contact</Link>
         </nav>
+
+        {/* Mobile Hamburger */}
+        <button
+          className="hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰
+        </button>
       </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="mobile-menu">
+          <Link to="/" onClick={() => setMenuOpen(false)}>
+            Home
+          </Link>
+
+          <Link to="/about" onClick={() => setMenuOpen(false)}>
+            About
+          </Link>
+
+          <Link to="/services" onClick={() => setMenuOpen(false)}>
+            Services
+          </Link>
+
+          <Link to="/faq" onClick={() => setMenuOpen(false)}>
+            FAQ
+          </Link>
+
+          <Link to="/blog" onClick={() => setMenuOpen(false)}>
+            Blog
+          </Link>
+
+          <Link to="/contact" onClick={() => setMenuOpen(false)}>
+            Contact
+          </Link>
+        </div>
+      )}
     </header>
   )
 }
