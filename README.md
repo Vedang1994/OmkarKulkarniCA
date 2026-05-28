@@ -1,5 +1,5 @@
 
-# Modern CA Firm Website
+# Omkar Kulkarni CA Firm Website
 
 ## Installation
 
