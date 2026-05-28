@@ -50,9 +50,14 @@ a{
   color:#123458;
 }
 
-.hero{
-  background:#F5E6D3;
-  padding:100px 0;
+.hero {
+  background:
+    radial-gradient(circle at top left, rgba(212, 175, 55, 0.15), transparent 30%),
+    linear-gradient(135deg, #fdf6ee 0%, #f5e6d3 45%, #eef4ff 100%);
+    
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-grid{
