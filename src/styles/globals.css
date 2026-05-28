@@ -60,6 +60,25 @@ a{
   overflow: hidden;
 }
 
+.hero::before {
+  content: '';
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  background: radial-gradient(
+    circle,
+    rgba(212,175,55,0.15),
+    transparent 70%
+  );
+
+  top: -200px;
+  right: -100px;
+
+  border-radius: 50%;
+}
+
 .hero-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -92,13 +111,30 @@ a{
   margin-top:30px;
 }
 
-.primary-btn{
-  background:#123458;
-  color:#fff;
-  border:none;
-  padding:14px 24px;
-  border-radius:999px;
-  cursor:pointer;
+
+.primary-btn {
+  background: linear-gradient(
+    135deg,
+    #123458 0%,
+    #1e4f82 100%
+  );
+
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 999px;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 10px 20px rgba(18,52,88,0.2);
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 15px 30px rgba(18,52,88,0.3);
 }
 
 .secondary-btn{
@@ -110,21 +146,45 @@ a{
   cursor:pointer;
 }
 
-.hero-card,
-.card{
-  background:#fff;
-  padding:30px;
-  border-radius:24px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+.hero-card { animation: floatCard 4s ease-in-out infinite; } @keyframes floatCard { 0% { transform: translateY(0px); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0px); } }
+.card {
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,1),
+    rgba(248,250,252,1)
+  );
+
+  padding: 30px;
+  border-radius: 24px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.06),
+    inset 0 1px 1px rgba(255,255,255,0.6);
+
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 20px 40px rgba(18,52,88,0.12),
+    0 10px 20px rgba(212,175,55,0.08);
 }
 
 .section{
   padding:80px 0;
 }
 
-.light{
-  background:#f8fafc;
+.light {
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f8fafc 100%
+    );
 }
+
 
 .section-title,
 .page-title{
@@ -139,11 +199,24 @@ a{
   gap:24px;
 }
 
-.footer{
-  background:#123458;
-  color:#fff;
-  padding:70px 0;
+.footer {
+  background:
+    linear-gradient(
+      135deg,
+      #0f2742 0%,
+      #123458 50%,
+      #1b4b7c 100%
+    );
+
+  color: white;
+  padding: 70px 0;
 }
+
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 .footer-grid{
   display:grid;
