@@ -7,7 +7,20 @@ export default function Navbar() {
   return (
     <header className="navbar">
       <div className="container nav-inner">
-        <div className="logo">CA Firm</div>
+
+<div className="logo-container">
+  <img
+    src="/Images/ORK_Logo.png"
+    alt="CA Firm Logo"
+    className="logo-image"
+  />
+
+  <div className="logo-text">
+    <h2>Omkar Kulkarni & Associates</h2>
+    <span>Chartered Accountants</span>
+  </div>
+</div>
+
 
         {/* Desktop Menu */}
         <nav className="nav-links desktop-menu">
