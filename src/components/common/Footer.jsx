@@ -5,11 +5,7 @@ export default function Footer() {
       <div className="container">
 
 <div className="footer-logo">
-  <img
-    src="/Images/ORK_Logo.png"
-    alt="CA Firm Logo"
-    className="footer-logo-image"
-  />
+<img src={`${import.meta.env.BASE_URL}Images/ORK_Logo.png`} alt="Logo" />
 
   <div>
     <h2>Omkar Kulkarni & Associates</h2>
