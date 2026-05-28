@@ -1,31 +1,51 @@
+import { motion } from 'framer-motion'
 
 export default function Testimonials() {
   return (
     <section className="section light">
       <div className="container">
-        <h2 className="section-title">Client Testimonials</h2>
+        <motion.h2
+          className="section-title"
+
+          initial={{ opacity: 0, y: 40 }}
+
+          whileInView={{ opacity: 1, y: 0 }}
+
+          viewport={{ once: true }}
+
+          transition={{ duration: 0.6 }}
+        >
+          Client Testimonials
+        </motion.h2>
 
         <div className="card-grid">
-          <div className="card">
-            <p>
-              “Excellent support for GST and ITR filing. Very responsive team.”
-            </p>
-            <strong>- Rahul Sharma</strong>
-          </div>
 
-          <div className="card">
-            <p>
-              “They helped us register our startup smoothly and guided us at every step.”
-            </p>
-            <strong>- Priya Technologies</strong>
-          </div>
+          {[1, 2, 3].map((item, index) => (
+            <motion.div
+              key={index}
+              className="card"
 
-          <div className="card">
-            <p>
-              “Professional, transparent and very easy to work with.”
-            </p>
-            <strong>- Amit Verma</strong>
-          </div>
+              initial={{ opacity: 0, scale: 0.9 }}
+
+              whileInView={{ opacity: 1, scale: 1 }}
+
+              viewport={{ once: true }}
+
+              transition={{
+                duration: 0.5,
+                delay: index * 0.2,
+              }}
+            >
+              <p>
+                “Professional, responsive and very easy to work with.”
+              </p>
+
+              <strong>
+                Client {index + 1}
+              </strong>
+            </motion.div>
+          ))}
+
         </div>
       </div>
     </section>
