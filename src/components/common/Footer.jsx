@@ -6,7 +6,7 @@ export default function Footer() {
 
 <div className="footer-logo">
 <img
-  src={`${import.meta.env.BASE_URL}Images/ORK_Logo.png`}
+  src={`${import.meta.env.BASE_URL}images/logo.png`}
   alt="Logo"
   className="logo-image"
 />
