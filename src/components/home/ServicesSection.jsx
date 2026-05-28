@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 
 const services = [
   {
@@ -26,10 +27,24 @@ export default function ServicesSection() {
 
         <div className="card-grid">
           {services.map((service, index) => (
-            <div key={index} className="card">
+            <motion.div
+              key={index}
+              className="card"
+
+              initial={{ opacity: 0, y: 50 }}
+
+              whileInView={{ opacity: 1, y: 0 }}
+
+              viewport={{ once: true }}
+
+              transition={{
+                duration: 0.5,
+                delay: index * 0.2,
+              }}
+            >
               <h3>{service.title}</h3>
               <p>{service.desc}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
