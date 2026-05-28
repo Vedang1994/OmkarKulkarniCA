@@ -11,7 +11,7 @@ export default function Navbar() {
 <div className="logo-container">
 
 <img
-  src={`${import.meta.env.BASE_URL}Images/ORK_Logo.png`}
+  src={`${import.meta.env.BASE_URL}images/logo.png`}
   alt="Logo"
   className="logo-image"
 />
