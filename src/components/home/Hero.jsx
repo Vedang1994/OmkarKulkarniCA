@@ -1,10 +1,18 @@
+import { motion } from 'framer-motion'
 
 export default function Hero() {
   return (
     <section className="hero">
       <div className="container hero-grid">
-        <div>
-          <span className="badge">Trusted CA Services in India</span>
+
+        <motion.div
+          initial={{ opacity: 0, y: 80 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <span className="badge">
+            Trusted CA Services in India
+          </span>
 
           <h1>
             Simplifying Taxes & Compliance for Individuals and Businesses
@@ -16,12 +24,22 @@ export default function Hero() {
           </p>
 
           <div className="hero-buttons">
-            <button className="primary-btn">File Your ITR</button>
-            <button className="secondary-btn">Book Consultation</button>
-          </div>
-        </div>
+            <button className="primary-btn">
+              File Your ITR
+            </button>
 
-        <div className="hero-card">
+            <button className="secondary-btn">
+              Book Consultation
+            </button>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="hero-card"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
           <h3>Why Choose Us?</h3>
 
           <ul>
@@ -31,7 +49,8 @@ export default function Hero() {
             <li>✔ Startup Friendly Guidance</li>
             <li>✔ Online Consultation Support</li>
           </ul>
-        </div>
+        </motion.div>
+
       </div>
     </section>
   )
