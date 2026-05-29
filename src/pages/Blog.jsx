@@ -1,26 +1,161 @@
+import { motion } from 'framer-motion'
+
+const blogs = [
+  {
+    category: 'Income Tax',
+    title: 'Tax Saving Tips for Salaried Employees in India',
+    desc:
+      'Learn how to maximize deductions under Section 80C, 80D, HRA and home loan benefits.',
+  },
+
+  {
+    category: 'GST',
+    title: 'Common GST Mistakes Small Businesses Should Avoid',
+    desc:
+      'Avoid penalties by understanding GST return filing, invoice compliance and due dates.',
+  },
+
+  {
+    category: 'Startup',
+    title: 'Pvt Ltd vs LLP – Which is Better for Your Business?',
+    desc:
+      'Compare compliance, taxation and operational flexibility before choosing your business structure.',
+  },
+
+  {
+    category: 'Accounting',
+    title: 'Why Proper Book Keeping is Important for Businesses',
+    desc:
+      'Maintain accurate financial records for compliance, taxation and better business decisions.',
+  },
+
+  {
+    category: 'Compliance',
+    title: 'Important Due Dates Every Business Should Track',
+    desc:
+      'Stay compliant with GST returns, TDS filing, ROC filing and Income Tax deadlines.',
+  },
+
+  {
+    category: 'Finance',
+    title: 'Documents Required for Business Loan Applications',
+    desc:
+      'Understand CMA data, projected financials and banking documents required for loans.',
+  },
+]
 
 export default function Blog() {
   return (
-    <section className="section">
+    <section className="section blog-page">
       <div className="container">
-        <h1 className="page-title">Tax Tips & Updates</h1>
 
-        <div className="card-grid">
-          <div className="card">
-            <h3>Tax Saving Tips for Salaried Employees</h3>
-            <p>Learn how to maximize deductions and reduce tax liability.</p>
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+
+          <span className="section-badge">
+            Tax Tips & Insights
+          </span>
+
+          <h1 className="page-title">
+            Latest Tax, GST & Compliance Updates
+          </h1>
+
+          <p className="about-intro">
+            Stay updated with practical financial,
+            taxation and compliance insights for
+            individuals, startups and businesses
+            in India.
+          </p>
+
+        </motion.div>
+
+        {/* Featured Blog */}
+        <motion.div
+          className="featured-blog"
+
+          initial={{ opacity: 0, y: 40 }}
+
+          whileInView={{ opacity: 1, y: 0 }}
+
+          viewport={{ once: true }}
+
+          transition={{ duration: 0.6 }}
+        >
+
+          <div className="featured-content">
+
+            <span className="blog-category">
+              Featured Article
+            </span>
+
+            <h2>
+              Essential Tax Planning Strategies
+              for FY 2025-26
+            </h2>
+
+            <p>
+              Smart tax planning helps individuals
+              and businesses reduce liabilities,
+              improve compliance and optimize
+              financial decisions legally.
+            </p>
+
+            <button className="primary-btn">
+              Read More
+            </button>
+
           </div>
 
-          <div className="card">
-            <h3>GST Tips for Small Businesses</h3>
-            <p>Understand GST filing deadlines and avoid penalties.</p>
-          </div>
+        </motion.div>
 
-          <div className="card">
-            <h3>Startup Compliance Checklist</h3>
-            <p>Important registrations and filings for startups.</p>
-          </div>
+        {/* Blog Grid */}
+        <div className="blog-grid">
+
+          {blogs.map((blog, index) => (
+
+            <motion.div
+              key={index}
+
+              className="blog-card"
+
+              initial={{ opacity: 0, y: 40 }}
+
+              whileInView={{ opacity: 1, y: 0 }}
+
+              viewport={{ once: true }}
+
+              transition={{
+                duration: 0.5,
+                delay: index * 0.1,
+              }}
+            >
+
+              <span className="blog-category">
+                {blog.category}
+              </span>
+
+              <h3>
+                {blog.title}
+              </h3>
+
+              <p>
+                {blog.desc}
+              </p>
+
+              <button className="blog-btn">
+                Read Article →
+              </button>
+
+            </motion.div>
+
+          ))}
+
         </div>
+
       </div>
     </section>
   )
