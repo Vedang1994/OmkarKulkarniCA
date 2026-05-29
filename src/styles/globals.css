@@ -588,3 +588,24 @@ html {
     font-size:22px;
   }
 }
+
+
+/* Quick Links Fix */
+
+.footer-grid a {
+  display: block;
+
+  color: rgba(255,255,255,0.88) !important;
+
+  margin-bottom: 12px;
+
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.footer-grid a:hover {
+  color: #ffffff !important;
+
+  transform: translateX(4px);
+}
