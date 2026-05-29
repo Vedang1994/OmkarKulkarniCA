@@ -20,7 +20,7 @@ export default function Home() {
 
     <p className="about-intro">
       Welcome to OMKAR RAVINDRA KULKARNI & ASSOCIATES,
-      Chartered Accountants — your trusted partner
+      Chartered Accountants - your trusted partner
       in financial excellence.
     </p>
 
