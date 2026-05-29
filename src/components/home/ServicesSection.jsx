@@ -2,36 +2,86 @@ import { motion } from 'framer-motion'
 
 const services = [
   {
-    title: 'Income Tax Filing',
-    desc: 'ITR filing for salaried employees, freelancers and businesses.',
+    title: 'Financial Accounting',
+    items: [
+      'Book Keeping',
+      'Projected Financial Statements',
+      'Reports',
+      'CMA Data',
+    ],
   },
+
   {
-    title: 'GST Services',
-    desc: 'GST registration, filing and notice handling.',
+    title: 'Income Tax',
+    items: [
+      'TAN Registration',
+      'TDS Returns',
+      'Filing of Income Tax Returns',
+      'Handling Income Tax Notices',
+    ],
   },
+
   {
-    title: 'Company Registration',
-    desc: 'Pvt Ltd, LLP and startup incorporation services.',
+    title: 'GST',
+    items: [
+      'GST Registration',
+      'GST Returns',
+      'GST Compliances',
+    ],
   },
+
   {
-    title: 'Accounting & Payroll',
-    desc: 'Bookkeeping, payroll and TDS compliance.',
+    title: 'Registrations / Incorporations',
+    items: [
+      'Private Limited Company',
+      'Limited Liability Partnership',
+      'Partnership Firm (ROF)',
+      'Leave & License Agreements',
+      'Gift Deeds',
+    ],
+  },
+
+  {
+    title: 'Assistance for Finance',
+    items: [
+      'Project Loan',
+      'Term Loan',
+      'Cash Credit Working Capital Loan',
+      'Home Loan',
+      'Personal Loan',
+    ],
+  },
+
+  {
+    title: 'Digital Signature Certificate',
+    items: [
+      'Class 3 Digital Signature Certificates (DSC)',
+    ],
   },
 ]
 
 export default function ServicesSection() {
   return (
-    <section className="section">
+    <section className="section services-section">
       <div className="container">
-        <h2 className="section-title">Our Services</h2>
 
-        <div className="card-grid">
+        <span className="section-badge">
+          Our Services
+        </span>
+
+        <h2 className="section-title">
+          Professional Financial & Compliance Services
+        </h2>
+
+        <div className="services-grid">
+
           {services.map((service, index) => (
+
             <motion.div
               key={index}
-              className="card"
+              className="service-card"
 
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 40 }}
 
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -39,13 +89,24 @@ export default function ServicesSection() {
 
               transition={{
                 duration: 0.5,
-                delay: index * 0.2,
+                delay: index * 0.1,
               }}
             >
               <h3>{service.title}</h3>
-              <p>{service.desc}</p>
+
+              <ul>
+
+                {service.items.map((item, i) => (
+                  <li key={i}>
+                    ✓ {item}
+                  </li>
+                ))}
+
+              </ul>
             </motion.div>
+
           ))}
+
         </div>
       </div>
     </section>
