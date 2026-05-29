@@ -1107,3 +1107,147 @@ html {
     font-size:24px;
   }
 }
+
+/* Contact Page */
+
+.contact-page {
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f8fafc 100%
+    );
+}
+
+.contact-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+  gap: 40px;
+
+  align-items: start;
+}
+
+/* Contact Info */
+
+.contact-info-card {
+  background:
+    linear-gradient(
+      135deg,
+      #123458 0%,
+      #1b4b7c 100%
+    );
+
+  color: white;
+
+  padding: 40px;
+
+  border-radius: 32px;
+
+  box-shadow:
+    0 20px 40px rgba(18,52,88,0.15);
+}
+
+.contact-info-card h3 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.contact-item {
+  margin-bottom: 24px;
+}
+
+.contact-item strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.contact-item p {
+  color: rgba(255,255,255,0.88);
+}
+
+/* Contact Form */
+
+.contact-form {
+  background: white;
+
+  padding: 40px;
+
+  border-radius: 32px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.06);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+
+  padding: 16px 18px;
+
+  border:
+    1px solid #e2e8f0;
+
+  border-radius: 16px;
+
+  font-size: 16px;
+
+  outline: none;
+
+  transition: 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  border-color: #123458;
+
+  box-shadow:
+    0 0 0 4px rgba(18,52,88,0.08);
+}
+
+/* WhatsApp Button */
+
+.whatsapp-btn {
+  display: inline-block;
+
+  margin-top: 20px;
+
+  background: #25D366;
+
+  color: white;
+
+  padding: 14px 24px;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-2px);
+}
+
+@media(max-width:768px){
+
+  .contact-info-card,
+  .contact-form{
+    padding:30px;
+  }
+
+  .contact-info-card h3{
+    font-size:28px;
+  }
+}
