@@ -7,6 +7,7 @@ import Services from '../pages/Services'
 import FAQ from '../pages/FAQ'
 import Blog from '../pages/Blog'
 import Contact from '../pages/Contact'
+import BlogDetails from '../pages/BlogDetails'
 
 export default function AppRoutes() {
   return (
