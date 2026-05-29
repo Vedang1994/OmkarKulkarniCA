@@ -1,44 +1,75 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 const blogs = [
   {
     category: 'Income Tax',
-    title: 'Tax Saving Tips for Salaried Employees in India',
+
+    slug: 'tax-saving-tips',
+
+    title:
+      'Tax Saving Tips for Salaried Employees in India',
+
     desc:
       'Learn how to maximize deductions under Section 80C, 80D, HRA and home loan benefits.',
   },
 
   {
     category: 'GST',
-    title: 'Common GST Mistakes Small Businesses Should Avoid',
+
+    slug: 'gst-mistakes',
+
+    title:
+      'Common GST Mistakes Small Businesses Should Avoid',
+
     desc:
       'Avoid penalties by understanding GST return filing, invoice compliance and due dates.',
   },
 
   {
     category: 'Startup',
-    title: 'Pvt Ltd vs LLP – Which is Better for Your Business?',
+
+    slug: 'pvt-vs-llp',
+
+    title:
+      'Pvt Ltd vs LLP – Which is Better for Your Business?',
+
     desc:
       'Compare compliance, taxation and operational flexibility before choosing your business structure.',
   },
 
   {
     category: 'Accounting',
-    title: 'Why Proper Book Keeping is Important for Businesses',
+
+    slug: 'book-keeping-importance',
+
+    title:
+      'Why Proper Book Keeping is Important for Businesses',
+
     desc:
       'Maintain accurate financial records for compliance, taxation and better business decisions.',
   },
 
   {
     category: 'Compliance',
-    title: 'Important Due Dates Every Business Should Track',
+
+    slug: 'business-due-dates',
+
+    title:
+      'Important Due Dates Every Business Should Track',
+
     desc:
       'Stay compliant with GST returns, TDS filing, ROC filing and Income Tax deadlines.',
   },
 
   {
     category: 'Finance',
-    title: 'Documents Required for Business Loan Applications',
+
+    slug: 'business-loan-documents',
+
+    title:
+      'Documents Required for Business Loan Applications',
+
     desc:
       'Understand CMA data, projected financials and banking documents required for loans.',
   },
@@ -104,9 +135,12 @@ export default function Blog() {
               financial decisions legally.
             </p>
 
-            <button className="primary-btn">
+            <Link
+              to="/blog/tax-saving-tips"
+              className="primary-btn"
+            >
               Read More
-            </button>
+            </Link>
 
           </div>
 
@@ -146,9 +180,12 @@ export default function Blog() {
                 {blog.desc}
               </p>
 
-              <button className="blog-btn">
+              <Link
+                to={`/blog/${blog.slug}`}
+                className="blog-btn"
+              >
                 Read Article →
-              </button>
+              </Link>
 
             </motion.div>
 
