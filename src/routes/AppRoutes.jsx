@@ -19,6 +19,7 @@ export default function AppRoutes() {
         <Route path="faq" element={<FAQ />} />
         <Route path="blog" element={<Blog />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="blog/:slug" element={<BlogDetails />} />
       </Route>
     </Routes>
   )
