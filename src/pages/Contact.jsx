@@ -51,12 +51,12 @@ export default function Contact() {
 
             <div className="contact-item">
               <strong>Email</strong>
-              <p>info@cafirm.com</p>
+              <p>caomkark@outlook.com</p>
             </div>
 
             <div className="contact-item">
               <strong>Phone</strong>
-              <p>+91 9876543210</p>
+              <p>+91 8446486829</p>
             </div>
 
             <div className="contact-item">
@@ -71,7 +71,7 @@ export default function Contact() {
 
             {/* WhatsApp */}
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/918446486829"
               target="_blank"
               rel="noreferrer"
               className="whatsapp-btn"
@@ -93,7 +93,7 @@ export default function Contact() {
           >
 
             <form
-              action="https://formspree.io/f/YOUR_FORM_ID"
+              action="https://formspree.io/f/mbdbbrgk"
               method="POST"
               className="contact-form"
             >
