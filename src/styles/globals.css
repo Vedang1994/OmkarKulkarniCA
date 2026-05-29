@@ -380,7 +380,7 @@ html {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .footer-logo-image {
@@ -592,20 +592,57 @@ html {
 
 /* Quick Links Fix */
 
+/* Footer Grid */
+
+.footer-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+  gap: 40px;
+
+  margin-bottom: 40px;
+
+  align-items: flex-start;
+}
+
+/* Footer Headings */
+
+.footer-grid h4 {
+  margin-bottom: 18px;
+
+  font-size: 22px;
+}
+
+/* Footer Text */
+
+.footer-grid p,
 .footer-grid a {
   display: block;
 
-  color: rgba(255,255,255,0.88) !important;
+  color: rgba(255,255,255,0.85);
 
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+
+  line-height: 1.5;
 
   text-decoration: none;
 
   transition: all 0.3s ease;
 }
 
+/* Footer Link Hover */
+
 .footer-grid a:hover {
-  color: #ffffff !important;
+  color: #ffffff;
 
   transform: translateX(4px);
+}
+
+/* Footer Services */
+
+.footer-grid p:last-child,
+.footer-grid a:last-child {
+  margin-bottom: 0;
 }
